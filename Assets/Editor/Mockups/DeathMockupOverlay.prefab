@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 2b8adcfde1ea84253a47577b60fadef4, type: 3}
     - target: {fileID: 4519280380952790347, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
       propertyPath: m_Name
-      value: DeathMockupImage Variant
+      value: DeathMockupOverlay
       objectReference: {fileID: 0}
     - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
       propertyPath: m_Pivot.x
@@ -39,14 +39,6 @@ PrefabInstance:
     - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 750
-      objectReference: {fileID: 0}
-    - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1334
       objectReference: {fileID: 0}
     - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -74,14 +66,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5006486955351136387, guid: 8cc9eaba3be2b447ebc3b69c7a058e6d, type: 3}
