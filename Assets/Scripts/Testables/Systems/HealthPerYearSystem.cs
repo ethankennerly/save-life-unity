@@ -15,8 +15,10 @@ namespace EthanKennerly.PoorLife
                     HealthComponent health = ageUp.Health;
                     health.HealthPercent += health.HealthPerYear;
                     health.HealthPercent = Mathf.Clamp(health.HealthPercent, 0, 100);
-                    health.HealthPerYear += health.HealthPerYearPerYear;
-                    health.HealthPerYearPerYear += health.HealthPerYearPerYearPerYear;
+                    if (ageUp.Age > health.PeakAge)
+                    {
+                        health.HealthPerYear = -1;
+                    }
 
                     RefreshHealthBar(health);
                 }

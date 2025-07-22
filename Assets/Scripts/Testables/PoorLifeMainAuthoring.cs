@@ -26,7 +26,10 @@ namespace EthanKennerly.PoorLife
 
         private void LateUpdate()
         {
-            _poorLife.Update(Time.deltaTime);
+            if (_poorLife != null)
+            {
+                _poorLife.Update(Time.deltaTime);
+            }
         }
 
         private void OnDestroy()

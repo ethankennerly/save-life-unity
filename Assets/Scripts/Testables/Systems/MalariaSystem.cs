@@ -11,9 +11,9 @@ namespace EthanKennerly.PoorLife
             {
                 if (command is AgeUpComponent ageUp && ageUp.Age > 0)
                 {
-                    if (Random.value < 0.05f)
+                    HealthComponent health = ageUp.Health;
+                    if (Random.value < 0.1f)
                     {
-                        HealthComponent health = ageUp.Health;
                         health.HealthPercent -= 10;
                         ageUp.Text += "\n\nI got malaria.";
                     }

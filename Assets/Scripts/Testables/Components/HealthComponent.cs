@@ -4,15 +4,14 @@ namespace EthanKennerly.PoorLife
     {
         public int HealthPercent;
         public int HealthPerYear;
-        public int HealthPerYearPerYear;
-        public int HealthPerYearPerYearPerYear;
+        public int PeakAge;
         public IHealthAuthoring Authoring;
 
         public HealthComponent(IHealthAuthoring authoring)
         {
             HealthPercent = 5;
-            HealthPerYearPerYear = 7;
-            HealthPerYearPerYearPerYear = -1;
+            HealthPerYear = 4;
+            PeakAge = 20;
             Authoring = authoring;
         }
     }
