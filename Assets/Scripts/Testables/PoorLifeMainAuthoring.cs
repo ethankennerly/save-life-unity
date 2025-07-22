@@ -10,8 +10,8 @@ namespace EthanKennerly.PoorLife
         public Transform Parent { get { return _parent; } }
 
         [SerializeField]
-        private Button _ageUpButton;
-        public Button AgeUpButton { get { return _ageUpButton; } }
+        private AgeUpAuthoring _ageUp;
+        public IAgeUpAuthoring AgeUp { get { return _ageUp; } }
 
         [SerializeField]
         private GameObject _deathPopupPrefab;

@@ -6,7 +6,7 @@ namespace EthanKennerly.PoorLife
     public interface IPoorLifeMainAuthoring
     {
         Transform Parent { get; }
-        Button AgeUpButton { get; }
+        IAgeUpAuthoring AgeUp { get; }
         GameObject DeathPopupPrefab { get; }
     }
 }

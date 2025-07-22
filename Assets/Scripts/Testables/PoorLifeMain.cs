@@ -11,6 +11,7 @@ namespace EthanKennerly.PoorLife
         private readonly List<step_log> _commands;
         private readonly MainSystem _mainSystem;
         private float _elapsedTime;
+        private AgeUpComponent _ageUp;
 
         public PoorLifeMain(IPoorLifeMainAuthoring authoring)
         {
@@ -18,14 +19,21 @@ namespace EthanKennerly.PoorLife
             _logger = new DummyDatabaseLogger();
             _commands = new List<step_log>();
             _mainSystem = new MainSystem(authoring);
-            _authoring.AgeUpButton.onClick.RemoveListener(OnAgeUpButtonClicked);
-            _authoring.AgeUpButton.onClick.AddListener(OnAgeUpButtonClicked);
         }
 
         public void Update(float deltaTime)
         {
             _elapsedTime += deltaTime;
+
+            if (_ageUp == null)
+            {
+                _ageUp = new AgeUpComponent();
+                _ageUp.Authoring = _authoring.AgeUp;
+                _commands.Add(_ageUp);
+            }
+
             LogCommands();
+
             _mainSystem.Update(deltaTime, _commands);
             _commands.Clear();
         }
@@ -34,15 +42,7 @@ namespace EthanKennerly.PoorLife
         {
             _logger.Flush();
             _logger.Dispose();
-        }
-
-        private void OnAgeUpButtonClicked()
-        {
-            step_log log = new step_log
-            {
-                log_step = LogStep.AgeUpClicked
-            };
-            _commands.Add(log);
+            _ageUp = null;
         }
 
         private void LogCommands()

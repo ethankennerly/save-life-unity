@@ -9,6 +9,7 @@ namespace EthanKennerly.PoorLife
         public MainSystem(IPoorLifeMainAuthoring authoring)
         {
             _updater = new SystemUpdater();
+            _updater.AddSystem(new AgeUpLogSystem());
             _updater.AddSystem(new DeathPopupSystem(authoring));
         }
 

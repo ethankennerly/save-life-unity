@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199596684923560861}
   - component: {fileID: -7649408024664959567}
+  - component: {fileID: 2686613627612567453}
   m_Layer: 0
   m_Name: PoorLifeMain
   m_TagString: Untagged
@@ -46,8 +47,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Testables::EthanKennerly.PoorLife.PoorLifeMainAuthoring
   _parent: {fileID: 1172988084756337143}
-  _ageUpButton: {fileID: 891687981329254906}
+  _ageUp: {fileID: 2686613627612567453}
   _deathPopupPrefab: {fileID: 5613693495072624034, guid: 300a02174f54c4040ae496290ba61a8e, type: 3}
+--- !u!114 &2686613627612567453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4893031614423041803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801a56a89dfdd4ee19801d43dd106e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Testables::EthanKennerly.PoorLife.AgeUpAuthoring
+  _ageUpButton: {fileID: 891687981329254906}
+  _text: {fileID: 5543676392421085566}
+  _scrollRect: {fileID: 5508775399118179582}
+  _contentRectTransform: {fileID: 717292558272449952}
+  _viewportRectTransform: {fileID: 9985421660426517}
 --- !u!1001 &8401004557792877537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,6 +77,26 @@ PrefabInstance:
     - target: {fileID: 1506918399318778272, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 370.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 308
+      objectReference: {fileID: 0}
+    - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -185.4
       objectReference: {fileID: 0}
     - target: {fileID: 7264613307397720598, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_Pivot.x
@@ -140,11 +178,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9034793605729015361, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+--- !u!224 &9985421660426517 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8409668091363855092, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+  m_PrefabInstance: {fileID: 8401004557792877537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &717292558272449952 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9034793605729015361, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+  m_PrefabInstance: {fileID: 8401004557792877537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &891687981329254906 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8703686062741066267, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
@@ -161,3 +213,25 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7264613307397720598, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
   m_PrefabInstance: {fileID: 8401004557792877537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5508775399118179582 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4099761287619614495, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+  m_PrefabInstance: {fileID: 8401004557792877537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
+--- !u!114 &5543676392421085566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4069360069007166111, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+  m_PrefabInstance: {fileID: 8401004557792877537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI

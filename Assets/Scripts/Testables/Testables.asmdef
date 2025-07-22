@@ -1,7 +1,9 @@
 {
     "name": "Testables",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "Unity.TextMeshPro"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

@@ -19,7 +19,7 @@ namespace EthanKennerly.PoorLife
         {
             foreach (step_log command in commands)
             {
-                if (command.log_step == LogStep.AgeUpClicked)
+                if (command is AgeUpComponent ageUp && ageUp.Age >= 62)
                 {
                     ShowDeathPopupOnce();
                 }
