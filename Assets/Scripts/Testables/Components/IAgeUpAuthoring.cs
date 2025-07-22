@@ -11,5 +11,6 @@ namespace EthanKennerly.PoorLife
         ScrollRect ScrollRect { get; }
         RectTransform ContentRectTransform { get; }
         RectTransform ViewportRectTransform { get; }
+        IHealthAuthoring Health { get; }
     }
 }

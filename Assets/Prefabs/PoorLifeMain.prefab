@@ -66,6 +66,7 @@ MonoBehaviour:
   _scrollRect: {fileID: 5508775399118179582}
   _contentRectTransform: {fileID: 717292558272449952}
   _viewportRectTransform: {fileID: 9985421660426517}
+  _health: {fileID: 288761837153157555}
 --- !u!1001 &8401004557792877537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +193,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8409668091363855092, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
   m_PrefabInstance: {fileID: 8401004557792877537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &288761837153157555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8113162706126281298, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+  m_PrefabInstance: {fileID: 8401004557792877537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 416537c0e5f8e46d592b52c76f1df14a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Testables::EthanKennerly.PoorLife.HealthAuthoring
 --- !u!224 &717292558272449952 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9034793605729015361, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}

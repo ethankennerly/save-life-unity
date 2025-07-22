@@ -27,8 +27,7 @@ namespace EthanKennerly.PoorLife
 
             if (_ageUp == null)
             {
-                _ageUp = new AgeUpComponent();
-                _ageUp.Authoring = _authoring.AgeUp;
+                _ageUp = new AgeUpComponent(_authoring.AgeUp);
                 _commands.Add(_ageUp);
             }
 

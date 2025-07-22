@@ -1,0 +1,33 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace EthanKennerly.PoorLife
+{
+    public class HealthPerYearSystem : ISystem
+    {
+        public void Update(float deltaTime, List<step_log> commands)
+        {
+            foreach (step_log command in commands)
+            {
+                if (command is AgeUpComponent ageUp)
+                {
+                    HealthComponent health = ageUp.Health;
+                    health.HealthPercent += health.HealthPerYear;
+                    health.HealthPercent = Mathf.Clamp(health.HealthPercent, 0, 100);
+                    health.HealthPerYear += health.HealthPerYearPerYear;
+                    health.HealthPerYearPerYear += health.HealthPerYearPerYearPerYear;
+
+                    RefreshHealthBar(health);
+                }
+            }
+        }
+
+        private void RefreshHealthBar(HealthComponent health)
+        {
+            IHealthAuthoring authoring = health.Authoring;
+            authoring.HealthPercentText.text = $"{health.HealthPercent}%";
+            authoring.FillImage.fillAmount = health.HealthPercent / 100f;
+        }
+    }
+}

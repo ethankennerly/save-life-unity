@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2278710263797301273, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.0000009536743
+      objectReference: {fileID: 0}
     - target: {fileID: 2313170199525131375, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
       propertyPath: m_Name
       value: MockupOverlay
@@ -211,6 +215,26 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5185775796469145813, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185775796469145813, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185775796469145813, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185775796469145813, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5185775796469145813, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8264873003637798512, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -221,6 +245,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8264873003637798512, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015198618120995797, guid: 8852165a938b14f0f92cedaa4839218e, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

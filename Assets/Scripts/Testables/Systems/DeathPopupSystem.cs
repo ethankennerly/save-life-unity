@@ -19,7 +19,7 @@ namespace EthanKennerly.PoorLife
         {
             foreach (step_log command in commands)
             {
-                if (command is AgeUpComponent ageUp && ageUp.Age >= 62)
+                if (command is AgeUpComponent ageUp && ageUp.Health.HealthPercent <= 0)
                 {
                     ShowDeathPopupOnce();
                 }
