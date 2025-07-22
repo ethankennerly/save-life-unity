@@ -6,8 +6,16 @@ namespace EthanKennerly.PoorLife
     public class PoorLifeMainAuthoring : MonoBehaviour, IPoorLifeMainAuthoring
     {
         [SerializeField]
+        private Transform _parent;
+        public Transform Parent { get { return _parent; } }
+
+        [SerializeField]
         private Button _ageUpButton;
         public Button AgeUpButton { get { return _ageUpButton; } }
+
+        [SerializeField]
+        private GameObject _deathPopupPrefab;
+        public GameObject DeathPopupPrefab { get { return _deathPopupPrefab; } }
 
         private PoorLifeMain _poorLife;
 

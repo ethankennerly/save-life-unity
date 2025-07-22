@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573c5738e69924bf8b537b45ce1572ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Testables::EthanKennerly.PoorLife.PoorLifeMainAuthoring
+  _parent: {fileID: 1172988084756337143}
   _ageUpButton: {fileID: 891687981329254906}
+  _deathPopupPrefab: {fileID: 5613693495072624034, guid: 300a02174f54c4040ae496290ba61a8e, type: 3}
 --- !u!1001 &8401004557792877537
 PrefabInstance:
   m_ObjectHideFlags: 0

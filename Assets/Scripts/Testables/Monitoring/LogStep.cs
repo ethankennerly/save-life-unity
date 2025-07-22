@@ -5,5 +5,6 @@ namespace EthanKennerly.PoorLife
         None = 0,
         WaitForMilliseconds = 1,
         AgeUpClicked = 2,
+        Death = 3,
     }
 }
