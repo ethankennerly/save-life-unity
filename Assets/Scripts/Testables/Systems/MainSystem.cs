@@ -15,7 +15,7 @@ namespace EthanKennerly.PoorLife
             _updater.AddSystem(new DeathPopupSystem(authoring));
         }
 
-        public void Update(float deltaTime, List<step_log> commands)
+        public void Update(float deltaTime, List<IComponent> commands)
         {
             _updater.Update(deltaTime, commands);
         }

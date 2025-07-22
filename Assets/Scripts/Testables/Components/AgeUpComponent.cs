@@ -1,6 +1,6 @@
 namespace EthanKennerly.PoorLife
 {
-    public class AgeUpComponent : step_log, IComponent
+    public class AgeUpComponent : IComponent
     {
         public readonly IAgeUpAuthoring Authoring;
         public readonly HealthComponent Health;
@@ -10,7 +10,6 @@ namespace EthanKennerly.PoorLife
 
         public AgeUpComponent(IAgeUpAuthoring authoring)
         {
-            log_step = LogStep.AgeUpClicked;
             Authoring = authoring;
             Health = new HealthComponent(authoring.Health);
         }

@@ -15,9 +15,9 @@ namespace EthanKennerly.PoorLife
             _popupPrefab = authoring.DeathPopupPrefab;
         }
 
-        public void Update(float deltaTime, List<step_log> commands)
+        public void Update(float deltaTime, List<IComponent> commands)
         {
-            foreach (step_log command in commands)
+            foreach (IComponent command in commands)
             {
                 if (command is AgeUpComponent ageUp && ageUp.Health.HealthPercent <= 0)
                 {

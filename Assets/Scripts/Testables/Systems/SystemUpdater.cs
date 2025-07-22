@@ -16,7 +16,7 @@ namespace EthanKennerly.PoorLife
             _systems.Add(system);
         }
 
-        public void Update(float deltaTime, List<step_log> commands)
+        public void Update(float deltaTime, List<IComponent> commands)
         {
             foreach (ISystem system in _systems)
             {
