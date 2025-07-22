@@ -67,6 +67,7 @@ MonoBehaviour:
   _contentRectTransform: {fileID: 717292558272449952}
   _viewportRectTransform: {fileID: 9985421660426517}
   _health: {fileID: 288761837153157555}
+  _ailment: {fileID: 3660290787459325251}
 --- !u!1001 &8401004557792877537
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,23 +82,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 370.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 308
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -185.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7264613307397720598, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_Pivot.x
@@ -225,6 +226,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7264613307397720598, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
   m_PrefabInstance: {fileID: 8401004557792877537}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3660290787459325251 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5070395906651276962, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
+  m_PrefabInstance: {fileID: 8401004557792877537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44cefe3336ac54a69a1ff61d0d7eff27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Testables::EthanKennerly.PoorLife.AilmentAuthoring
 --- !u!114 &5508775399118179582 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4099761287619614495, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}

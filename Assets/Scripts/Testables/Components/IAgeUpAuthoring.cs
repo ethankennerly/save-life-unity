@@ -12,5 +12,6 @@ namespace EthanKennerly.PoorLife
         RectTransform ContentRectTransform { get; }
         RectTransform ViewportRectTransform { get; }
         IHealthAuthoring Health { get; }
+        IAilmentAuthoring Ailment { get; }
     }
 }

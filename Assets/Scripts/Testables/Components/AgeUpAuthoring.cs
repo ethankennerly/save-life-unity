@@ -29,5 +29,9 @@ namespace EthanKennerly.PoorLife
         [SerializeField]
         private HealthAuthoring _health;
         public IHealthAuthoring Health { get { return _health; } }
+
+        [SerializeField]
+        private AilmentAuthoring _ailment;
+        public IAilmentAuthoring Ailment { get { return _ailment; } }
     }
 }
