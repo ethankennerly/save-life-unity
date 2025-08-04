@@ -167,14 +167,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5631284665525349019, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
-      propertyPath: replayAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 6f920fb83ee154005970973b6ff215e9, type: 2}
-    - target: {fileID: 5631284665525349019, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
-      propertyPath: isReplayMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7719735704840748985, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
       propertyPath: m_Name
       value: TouchRecordingManager
@@ -447,23 +439,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 370.8
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -185.4
       objectReference: {fileID: 0}
     - target: {fileID: 4893031614423041803, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_Name
