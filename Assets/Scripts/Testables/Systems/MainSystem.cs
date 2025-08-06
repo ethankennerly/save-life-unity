@@ -9,6 +9,7 @@ namespace EthanKennerly.PoorLife
         public MainSystem(IPoorLifeMainAuthoring authoring)
         {
             _updater = new SystemUpdater();
+            _updater.AddSystem(new TouchReplaySystem(authoring.TouchReplay));
             _updater.AddSystem(new MalariaSystem());
             _updater.AddSystem(new HealthPerYearSystem());
             _updater.AddSystem(new AgeUpLogSystem());

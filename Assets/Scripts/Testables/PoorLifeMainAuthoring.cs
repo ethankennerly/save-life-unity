@@ -17,6 +17,10 @@ namespace EthanKennerly.PoorLife
         private GameObject _deathPopupPrefab;
         public GameObject DeathPopupPrefab { get { return _deathPopupPrefab; } }
 
+        [SerializeField]
+        TouchReplayAuthoring _touchReplay;
+        public ITouchReplayAuthoring TouchReplay { get { return _touchReplay; } }
+
         private PoorLifeMain _poorLife;
 
         private void Awake()

@@ -1,6 +1,8 @@
+using EthanKennerly.PoorLife;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchReplaySystem
+public class TouchReplaySystem : ISystem
 {
     private readonly ITouchReplayAuthoring _authoring;
     private readonly ITouchReplayer _replayer;
@@ -9,7 +11,10 @@ public class TouchReplaySystem
     {
         _authoring = authoring;
 
-        if (_authoring.ReplayAsset != null && _authoring.ReplayAsset.touches.Count > 0)
+        var replayAsset = _authoring.ReplayAsset;
+        if (replayAsset != null &&
+            replayAsset.touches != null &&
+            replayAsset.touches.Count > 0)
         {
             // Use provided mock or real replayer
             _replayer = replayer ?? new TouchReplayerConcrete(
@@ -27,7 +32,7 @@ public class TouchReplaySystem
         }
     }
 
-    public void Update(float deltaTime)
+    public void Update(float deltaTime, List<IComponent> commands)
     {
         _replayer?.Update(deltaTime);
     }

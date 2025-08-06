@@ -13,7 +13,7 @@ public class TouchReplaySystemTests
         var system = new TouchReplaySystem(mockAuthoring, mockReplayer);
 
         // Act
-        system.Update(0.1f);
+        system.Update(0.1f, null);
 
         // Assert
         Assert.IsTrue(mockReplayer.PlayedTouches.Count >= 2);

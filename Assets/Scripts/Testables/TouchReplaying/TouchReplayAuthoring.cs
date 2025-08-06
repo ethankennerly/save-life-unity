@@ -14,16 +14,4 @@ public class TouchReplayAuthoring : MonoBehaviour, ITouchReplayAuthoring
     public Canvas TargetCanvas => targetCanvas;
     public Sprite IndicatorSprite => indicatorSprite;
     public Color IndicatorColor => indicatorColor;
-
-    private TouchReplaySystem _system;
-
-    private void Awake()
-    {
-        _system = new TouchReplaySystem(this);
-    }
-
-    private void Update()
-    {
-        _system?.Update(Time.deltaTime);
-    }
 }
