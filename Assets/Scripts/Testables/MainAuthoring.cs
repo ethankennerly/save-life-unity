@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
-    public class PoorLifeMainAuthoring : MonoBehaviour, IPoorLifeMainAuthoring
+    public class MainAuthoring : MonoBehaviour, IMainAuthoring
     {
         [SerializeField]
         private Transform _parent;
@@ -25,27 +25,27 @@ namespace EthanKennerly.PoorLife
         TouchReplayAuthoring _touchReplay;
         public ITouchReplayAuthoring TouchReplay => _touchReplay;
 
-        private PoorLifeMain _poorLife;
+        private MainController _saveLife;
 
         private void Awake()
         {
-            _poorLife = new PoorLifeMain(this);
+            _saveLife = new MainController(this);
         }
 
         private void LateUpdate()
         {
-            if (_poorLife != null)
+            if (_saveLife != null)
             {
-                _poorLife.Update(Time.deltaTime);
+                _saveLife.Update(Time.deltaTime);
             }
         }
 
         private void OnDestroy()
         {
-            if (_poorLife != null)
+            if (_saveLife != null)
             {
-                _poorLife.Dispose();
-                _poorLife = null;
+                _saveLife.Dispose();
+                _saveLife = null;
             }
         }
     }

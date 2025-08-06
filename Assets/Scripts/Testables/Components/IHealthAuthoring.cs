@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine.UI;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public interface IHealthAuthoring
     {

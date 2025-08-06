@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public class MainSystem : ISystem
     {
         private readonly SystemUpdater _updater;
 
-        public MainSystem(IPoorLifeMainAuthoring authoring)
+        public MainSystem(IMainAuthoring authoring)
         {
             _updater = new SystemUpdater();
             _updater.AddSystem(new TouchReplaySystem(authoring.TouchReplay));

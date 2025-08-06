@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public class SystemUpdater : ISystem
     {

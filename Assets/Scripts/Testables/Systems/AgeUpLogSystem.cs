@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public class AgeUpLogSystem : ISystem
     {

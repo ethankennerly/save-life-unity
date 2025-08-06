@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public class TrivialTests
     {

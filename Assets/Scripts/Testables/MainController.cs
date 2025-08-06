@@ -2,17 +2,17 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
-    public class PoorLifeMain : IDisposable
+    public class MainController : IDisposable
     {
-        private readonly IPoorLifeMainAuthoring _authoring;
+        private readonly IMainAuthoring _authoring;
         private readonly List<IComponent> _commands;
         private readonly MainSystem _mainSystem;
         private float _elapsedTime;
         private AgeUpComponent _ageUp;
 
-        public PoorLifeMain(IPoorLifeMainAuthoring authoring)
+        public MainController(IMainAuthoring authoring)
         {
             _authoring = authoring;
             _commands = new List<IComponent>();

@@ -1,4 +1,4 @@
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public class AgeUpComponent : IComponent
     {

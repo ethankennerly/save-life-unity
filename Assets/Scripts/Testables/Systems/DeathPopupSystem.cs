@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EthanKennerly.PoorLife
+namespace EthanKennerly.SaveLife
 {
     public class DeathPopupSystem : ISystem
     {
@@ -9,7 +9,7 @@ namespace EthanKennerly.PoorLife
         private readonly GameObject _popupPrefab;
         private GameObject _popup;
 
-        public DeathPopupSystem(IPoorLifeMainAuthoring authoring)
+        public DeathPopupSystem(IMainAuthoring authoring)
         {
             _parent = authoring.Parent;
             _popupPrefab = authoring.DeathPopupPrefab;
