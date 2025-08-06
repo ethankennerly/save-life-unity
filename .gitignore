@@ -18,6 +18,7 @@
 *.unitypackage
 *.unityproj
 *.userprefs
+[Mm]ockups*
 /.vs/
 /.vscode/
 /[Aa]ssets/[Aa]sset[Ss]tore[Tt]ools/
