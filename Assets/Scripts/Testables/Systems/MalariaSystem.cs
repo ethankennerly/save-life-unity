@@ -18,12 +18,19 @@ namespace EthanKennerly.PoorLife
                     }
 
                     HealthComponent health = ageUp.Health;
-                    if (Random.value < 0.125f)
+                    if (Random.value >= 0.125f)
                     {
-                        health.HealthPercent -= 10;
-                        ageUp.Text += "\n\nWhile I was sleeping, a mosquito bit me. I am suffering from malaria.";
-                        ShowPopup(ageUp.Authoring.Ailment);
+                        continue;
                     }
+
+                    ageUp.Text += "\n\nWhile I was sleeping, a mosquito bit me. I am suffering from malaria.";
+                    health.HealthPercent -= 10;
+                    if (health.HealthPercent <= 0)
+                    {
+                        continue;
+                    }
+
+                    ShowPopup(ageUp.Authoring.Ailment);
                 }
             }
         }
