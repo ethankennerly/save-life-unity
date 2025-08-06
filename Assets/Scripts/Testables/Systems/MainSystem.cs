@@ -14,6 +14,7 @@ namespace EthanKennerly.PoorLife
             _updater.AddSystem(new HealthPerYearSystem());
             _updater.AddSystem(new AgeUpLogSystem());
             _updater.AddSystem(new DeathPopupSystem(authoring));
+            _updater.AddSystem(new TouchRecordingSystem(authoring.TouchRecording));
         }
 
         public void Update(float deltaTime, List<IComponent> commands)

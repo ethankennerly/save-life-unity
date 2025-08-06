@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7719735704840748985, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
       propertyPath: m_Name
-      value: TouchRecordingManager
+      value: TouchReplayAuthoring
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -271,6 +271,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1e3985d03f9434e9861ef1cfeaaf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Testables::TouchReplayAuthoring
+--- !u!114 &1021847217 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5804385984798735503, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
+  m_PrefabInstance: {fileID: 121727139}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e7065fe12ac408c81825122ba84b93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Testables::TouchRecordingAuthoring
 --- !u!1 &1694642569
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +419,10 @@ PrefabInstance:
       propertyPath: _touchReplay
       value: 
       objectReference: {fileID: 878910152}
+    - target: {fileID: -7649408024664959567, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
+      propertyPath: _touchRecording
+      value: 
+      objectReference: {fileID: 1021847217}
     - target: {fileID: 717292558272449952, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -454,23 +469,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 370.8
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -185.4
       objectReference: {fileID: 0}
     - target: {fileID: 4893031614423041803, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_Name

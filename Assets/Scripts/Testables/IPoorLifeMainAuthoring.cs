@@ -8,6 +8,7 @@ namespace EthanKennerly.PoorLife
         Transform Parent { get; }
         IAgeUpAuthoring AgeUp { get; }
         GameObject DeathPopupPrefab { get; }
+        ITouchRecordingAuthoring TouchRecording { get; }
         ITouchReplayAuthoring TouchReplay { get; }
     }
 }

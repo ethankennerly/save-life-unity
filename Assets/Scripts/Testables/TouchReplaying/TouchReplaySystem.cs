@@ -12,28 +12,30 @@ public class TouchReplaySystem : ISystem
         _authoring = authoring;
 
         var replayAsset = _authoring.ReplayAsset;
-        if (replayAsset != null &&
-            replayAsset.touches != null &&
-            replayAsset.touches.Count > 0)
+        if (replayAsset == null ||
+            replayAsset.touches == null ||
+            replayAsset.touches.Count == 0)
         {
-            // Use provided mock or real replayer
-            _replayer = replayer ?? new TouchReplayerConcrete(
+            Debug.LogWarning("TouchReplaySystem: No replay asset or touches provided.");
+            return;
+        }
+
+        if (replayer == null)
+        {
+            replayer = new TouchReplayerConcrete(
                 _authoring.ReplayAsset.touches,
                 _authoring.TargetCanvas,
                 _authoring.IndicatorSprite,
                 _authoring.IndicatorColor
             );
+        }
 
-            _replayer.Start();
-        }
-        else
-        {
-            Debug.LogWarning("TouchReplaySystem: No replay asset or touches provided.");
-        }
+        _replayer = replayer;
+        _replayer.Start();
     }
 
-    public void Update(float deltaTime, List<IComponent> commands)
+    public void Update(float deltaTime, List<IComponent> _)
     {
-        _replayer?.Update(deltaTime);
+        _replayer.Update(deltaTime);
     }
 }
