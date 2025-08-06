@@ -6,18 +6,18 @@ using System.Collections.Generic;
 public class TouchReplayer
 {
     private readonly List<TouchLogEntry> log;
-    private int index = 0;
-    private float timer = 0f;
-    private bool active = false;
+    private int _index = 0;
+    private float _timer = 0f;
+    private bool _active = false;
 
-    public bool IsPlaying => active;
+    public bool IsPlaying => _active;
     public Vector2 CurrentPosition { get; private set; }
     public bool IsTouching { get; private set; }
 
-    private TouchAction lastAction;
+    private TouchAction _lastAction;
 
     // ✅ Touch Indicator
-    private Image touchIndicatorInstance;
+    private Image _touchIndicatorInstance;
     private readonly Canvas targetCanvas;
     private readonly Sprite indicatorSprite;
     private readonly Color indicatorColor;
@@ -36,30 +36,30 @@ public class TouchReplayer
 
     public void Start()
     {
-        index = 0;
-        timer = 0f;
+        _index = 0;
+        _timer = 0f;
         IsTouching = false;
-        active = log != null && log.Count > 0;
+        _active = log != null && log.Count > 0;
     }
 
     public void Update(float deltaTime)
     {
-        if (!active || index >= log.Count) return;
+        if (!_active || _index >= log.Count) return;
 
-        timer += deltaTime * 1000f; // ms
+        _timer += deltaTime * 1000f; // ms
 
-        var entry = log[index];
-        if (timer >= entry.DeltaMs)
+        var entry = log[_index];
+        if (_timer >= entry.DeltaMs)
         {
             Apply(entry);
-            timer = 0f;
-            index++;
-            if (index >= log.Count)
-                active = false;
+            _timer = 0f;
+            _index++;
+            if (_index >= log.Count)
+                _active = false;
         }
 
         // ✅ Move indicator if touch is down
-        if (IsTouching && touchIndicatorInstance != null)
+        if (IsTouching && _touchIndicatorInstance != null)
         {
             Vector2 uiPos;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -68,13 +68,13 @@ public class TouchReplayer
                 targetCanvas.worldCamera,
                 out uiPos
             );
-            touchIndicatorInstance.rectTransform.anchoredPosition = uiPos;
+            _touchIndicatorInstance.rectTransform.anchoredPosition = uiPos;
         }
     }
 
     private void Apply(TouchLogEntry entry)
     {
-        lastAction = entry.Action;
+        _lastAction = entry.Action;
         CurrentPosition = entry.GetScreenPos();
 
         switch (entry.Action)
@@ -150,20 +150,20 @@ public class TouchReplayer
         if (targetCanvas == null || indicatorSprite == null)
             return;
 
-        if (touchIndicatorInstance == null)
+        if (_touchIndicatorInstance == null)
         {
             var go = new GameObject("TouchIndicator", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
             go.transform.SetParent(targetCanvas.transform, false);
 
-            touchIndicatorInstance = go.GetComponent<Image>();
-            touchIndicatorInstance.sprite = indicatorSprite;
-            touchIndicatorInstance.color = indicatorColor;
-            touchIndicatorInstance.raycastTarget = false;
+            _touchIndicatorInstance = go.GetComponent<Image>();
+            _touchIndicatorInstance.sprite = indicatorSprite;
+            _touchIndicatorInstance.color = indicatorColor;
+            _touchIndicatorInstance.raycastTarget = false;
 
-            touchIndicatorInstance.rectTransform.sizeDelta = new Vector2(50f, 50f);
+            _touchIndicatorInstance.rectTransform.sizeDelta = new Vector2(50f, 50f);
         }
 
-        touchIndicatorInstance.gameObject.SetActive(true);
+        _touchIndicatorInstance.gameObject.SetActive(true);
 
         Vector2 uiPos;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -173,12 +173,12 @@ public class TouchReplayer
             out uiPos
         );
 
-        touchIndicatorInstance.rectTransform.anchoredPosition = uiPos;
+        _touchIndicatorInstance.rectTransform.anchoredPosition = uiPos;
     }
 
     private void HideTouchIndicator()
     {
-        if (touchIndicatorInstance != null)
-            touchIndicatorInstance.gameObject.SetActive(false);
+        if (_touchIndicatorInstance != null)
+            _touchIndicatorInstance.gameObject.SetActive(false);
     }
 }

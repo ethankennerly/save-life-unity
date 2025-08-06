@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Testables::TouchRecordingAuthoring
   saveFileName: RecordedTouches
-  saveButton: {fileID: 1803056511349998084}
+  _saveButton: {fileID: 1803056511349998084}
 --- !u!114 &998372818754756658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1e3985d03f9434e9861ef1cfeaaf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Testables::TouchReplayAuthoring
-  replayAsset: {fileID: 11400000, guid: 6f920fb83ee154005970973b6ff215e9, type: 2}
-  targetCanvas: {fileID: 5720500422893087628}
-  indicatorSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _replayAsset: {fileID: 11400000, guid: 6f920fb83ee154005970973b6ff215e9, type: 2}
+  _targetCanvas: {fileID: 5720500422893087628}
+  _indicatorSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   indicatorColor: {r: 0, g: 1, b: 0, a: 0.5}

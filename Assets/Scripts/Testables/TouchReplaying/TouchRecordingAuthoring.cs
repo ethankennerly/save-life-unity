@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class TouchRecordingAuthoring : MonoBehaviour, ITouchRecordingAuthoring
 {
     [Header("Recording Settings")]
-    [SerializeField] private string saveFileName = "RecordedTouches";
+    [SerializeField] private string _saveFileName = "RecordedTouches";
 
     [Header("UI")]
-    [SerializeField] private Button saveButton;
+    [SerializeField] private Button _saveButton;
 
-    public string SaveFileName => saveFileName;
-    public Button SaveButton => saveButton;
+    public string SaveFileName => _saveFileName;
+    public Button SaveButton => _saveButton;
 }
