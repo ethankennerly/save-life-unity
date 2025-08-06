@@ -7,10 +7,10 @@ namespace EthanKennerly.PoorLife
     {
         [SerializeField]
         private GameObject _PopupInstance;
-        public GameObject PopupInstance { get { return _PopupInstance; } }
+        public GameObject PopupInstance => _PopupInstance;
 
         [SerializeField]
         private Button _closeButton;
-        public Button CloseButton { get { return _closeButton; } }
+        public Button CloseButton => _closeButton;
     }
 }

@@ -8,10 +8,10 @@ namespace EthanKennerly.PoorLife
     {
         [SerializeField]
         private TMP_Text _healthPercentText;
-        public TMP_Text HealthPercentText { get { return _healthPercentText; } }
+        public TMP_Text HealthPercentText => _healthPercentText;
 
         [SerializeField]
         private Image _fillImage;
-        public Image FillImage { get { return _fillImage; } }
+        public Image FillImage => _fillImage;
     }
 }

@@ -7,23 +7,23 @@ namespace EthanKennerly.PoorLife
     {
         [SerializeField]
         private Transform _parent;
-        public Transform Parent { get { return _parent; } }
+        public Transform Parent => _parent;
 
         [SerializeField]
         private AgeUpAuthoring _ageUp;
-        public IAgeUpAuthoring AgeUp { get { return _ageUp; } }
+        public IAgeUpAuthoring AgeUp => _ageUp;
 
         [SerializeField]
         private GameObject _deathPopupPrefab;
-        public GameObject DeathPopupPrefab { get { return _deathPopupPrefab; } }
+        public GameObject DeathPopupPrefab => _deathPopupPrefab;
 
         [SerializeField]
         TouchRecordingAuthoring _touchRecording;
-        public ITouchRecordingAuthoring TouchRecording { get { return _touchRecording; } }
+        public ITouchRecordingAuthoring TouchRecording => _touchRecording;
 
         [SerializeField]
         TouchReplayAuthoring _touchReplay;
-        public ITouchReplayAuthoring TouchReplay { get { return _touchReplay; } }
+        public ITouchReplayAuthoring TouchReplay => _touchReplay;
 
         private PoorLifeMain _poorLife;
 
