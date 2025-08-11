@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TouchReplaying;
 
 namespace EthanKennerly.SaveLife
 {
@@ -14,7 +15,7 @@ namespace EthanKennerly.SaveLife
             _updater.AddSystem(new HealthPerYearSystem());
             _updater.AddSystem(new AgeUpLogSystem());
             _updater.AddSystem(new DeathPopupSystem(authoring));
-            _updater.AddSystem(new TouchRecordingSystem(authoring.TouchRecording));
+            _updater.AddSystem(new TouchRecordingSystem(authoring.TouchRecording, new TouchInputManager()));
         }
 
         public void Update(float deltaTime, List<IComponent> commands)
