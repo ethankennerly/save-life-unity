@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5804385984798735503, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
+      propertyPath: _eventSystem
+      value: 
+      objectReference: {fileID: 1694642571}
     - target: {fileID: 7719735704840748985, guid: 86c149b94d4194dba81b9b69a5d34aad, type: 3}
       propertyPath: m_Name
       value: TouchReplayAuthoring
@@ -469,23 +473,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 370.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 308
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -185.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4893031614423041803, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_Name

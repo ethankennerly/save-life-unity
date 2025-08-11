@@ -15,14 +15,14 @@ namespace TouchReplaying
         private readonly ITouchRecorder _recorder;
         private readonly int _sessionSeed;
 
-        public TouchRecordingSystem(ITouchRecordingAuthoring authoring, ITouchInputProvider inputProvider, ITouchRecorder recorder = null)
+        public TouchRecordingSystem(ITouchRecordingAuthoring authoring, ITouchInputProvider inputProvider = null, ITouchRecorder recorder = null)
         {
             _authoring = authoring;
             _sessionSeed = System.Environment.TickCount;
 
             Random.InitState(_sessionSeed);
 
-            _recorder = recorder ?? new TouchRecorder(inputProvider);
+            _recorder = recorder ?? new TouchRecorder(inputProvider, authoring);
 
             _authoring.SaveButton.onClick.AddListener(SaveLog);
         }
