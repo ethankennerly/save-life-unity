@@ -17,7 +17,7 @@ This project is just a demo of one replay.
 - A sample recording source asset is less than 32 KB.
 - A serialized sample recording could be compressed to less than 1 KB in a SQL database.
 - Unity Test Runner in Edit Mode validates a replay in less than 1 second.
-- Compatible with legacy input system.
+- Compatible with the legacy Input Manager and the newer Input System.
 
 ## Architecture
 
