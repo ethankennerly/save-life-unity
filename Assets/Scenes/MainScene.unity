@@ -333,7 +333,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2964718980990961906, guid: 791be071a278a495a94f95b40680e20e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -400,23 +401,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 370.8
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 3683853460709650080, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -185.4
       objectReference: {fileID: 0}
     - target: {fileID: 4893031614423041803, guid: a9d3c45b163274595be4a1f05c59d8b2, type: 3}
       propertyPath: m_Name
