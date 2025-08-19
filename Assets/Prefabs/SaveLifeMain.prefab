@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -7649408024664959567}
   - component: {fileID: 2686613627612567453}
   m_Layer: 0
-  m_Name: PoorLifeMain
+  m_Name: SaveLifeMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,6 +49,8 @@ MonoBehaviour:
   _parent: {fileID: 1172988084756337143}
   _ageUp: {fileID: 2686613627612567453}
   _deathPopupPrefab: {fileID: 5613693495072624034, guid: 300a02174f54c4040ae496290ba61a8e, type: 3}
+  _touchRecording: {fileID: 0}
+  _touchReplay: {fileID: 0}
 --- !u!114 &2686613627612567453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,23 +84,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 370.8
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 308
       objectReference: {fileID: 0}
     - target: {fileID: 5154915229634639169, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -185.4
       objectReference: {fileID: 0}
     - target: {fileID: 7264613307397720598, guid: 12c7d5d08783347ccad25a50e8584f4c, type: 3}
       propertyPath: m_Pivot.x
