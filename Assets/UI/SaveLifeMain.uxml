@@ -1,13 +1,13 @@
 <UXML xmlns="UnityEngine.UIElements" xmlns:ui="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/SaveLifeMain.uss?fileID=7433441132597879392&amp;guid=292513be461184547870ee8b16480dcf&amp;type=3#SaveLifeMain" />
     <VisualElement name="Root" class="full">
-        <ScrollView name="MainScroll" mode="Vertical">
+        <ScrollView name="LifeLogScroll" mode="Vertical">
             <VisualElement class="item">
                 <Label text="Row 1\nLine 2\nLine 3" parse-escape-sequences="true" double-click-selects-word="true" triple-click-selects-line="true" />
             </VisualElement>
         </ScrollView>
-        <Button text="&lt;size=+10&gt;+&lt;/size&gt;\nAge Up" name="Button" parse-escape-sequences="true" style="padding-top: 0; padding-bottom: 0; width: 100px; height: 75px; bottom: 0; right: auto; top: 0; left: auto; align-items: center; align-self: center; align-content: center;" />
-        <VisualElement name="Header" class="header">
+        <Button text="&lt;size=+10&gt;+&lt;/size&gt;\nAge Up" name="AgeUpButton" parse-escape-sequences="true" style="padding-top: 0; padding-bottom: 0; width: 100px; height: 75px; bottom: 0; right: auto; top: 0; left: auto; align-items: center; align-self: center; align-content: center;" />
+        <VisualElement name="ReplayHeader" class="header">
             <Label name="Title" text="Save Life" class="title" />
             <VisualElement class="row">
                 <Button name="StartButton" text="Start" />
@@ -16,6 +16,6 @@
                 <Toggle name="ReplayToggle" text="Replay" />
             </VisualElement>
         </VisualElement>
-        <VisualElement name="Content" class="content" style="flex-direction: column-reverse; top: 0; align-items: auto;" />
+        <VisualElement name="ReplayContent" class="content" style="flex-direction: column-reverse; top: 0; align-items: auto;" />
     </VisualElement>
 </UXML>
