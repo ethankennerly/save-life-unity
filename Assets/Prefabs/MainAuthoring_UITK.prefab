@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7717952111504112364}
+  - component: {fileID: 2255719280093284608}
+  - component: {fileID: 5473794077899016804}
   - component: {fileID: 4582904793175121956}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: MainAuthoring_UITK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,6 +34,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2255719280093284608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640706177139614054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1057b40b2b83746a98d753a81c56a850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parent: {fileID: 0}
+  _ageUp: {fileID: 5473794077899016804}
+  _deathPopupPrefab: {fileID: 0}
+  _touchRecording: {fileID: 0}
+  _touchReplay: {fileID: 0}
+--- !u!114 &5473794077899016804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5640706177139614054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab8c1d21a4c44319b332eaa97be6c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _uiDocument: {fileID: 4582904793175121956}
+  _ageUpButtonName: AgeUpButton
+  _text: {fileID: 0}
+  _scrollRect: {fileID: 0}
+  _contentRectTransform: {fileID: 0}
+  _viewportRectTransform: {fileID: 0}
+  _health: {fileID: 0}
+  _ailment: {fileID: 0}
 --- !u!114 &4582904793175121956
 MonoBehaviour:
   m_ObjectHideFlags: 0

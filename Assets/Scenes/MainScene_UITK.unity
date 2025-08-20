@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5640706177139614054, guid: 9b7961947114f4762a33c0871caa3206, type: 3}
       propertyPath: m_Name
-      value: UIDocument
+      value: MainAuthoring_UITK
       objectReference: {fileID: 0}
     - target: {fileID: 7717952111504112364, guid: 9b7961947114f4762a33c0871caa3206, type: 3}
       propertyPath: m_LocalPosition.x
