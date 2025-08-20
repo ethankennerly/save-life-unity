@@ -10,12 +10,15 @@ namespace EthanKennerly.SaveLife
         {
             foreach (IComponent command in commands)
             {
-                if (command is AgeUpComponent ageUp)
+                if (!(command is AgeUpComponent ageUp) || ageUp.Authoring == null)
                 {
-                    if (!ageUp.WasBorn)
-                    {
-                        ageUp.WasBorn = true;
-                        ageUp.Text = $@"<b>Age: {ageUp.Age} years</b>
+                    continue;
+                }
+
+                if (!ageUp.WasBorn)
+                {
+                    ageUp.WasBorn = true;
+                    ageUp.Text = $@"<b>Age: {ageUp.Age} years</b>
 I was born a female in Nasarawa, Nigeria. I was the result of a contraceptive-free marriage.
 
 My birthday is July 21.
@@ -24,17 +27,23 @@ My name is Anika Ibrahim.
 My mother is Ifamma Ibrahim, a farmer (age 17).
 My father is Asha Ibrahim, a farmer (age 16).";
 
-                        ageUp.Authoring.AgeUpClicked(() => commands.Add(ageUp));
-                    }
-                    else
-                    {
-                        ageUp.Age++;
-                        ageUp.Text += $"\n\n<b>Age: {ageUp.Age} years</b>";
-                    }
-
-                    ageUp.Authoring.Text.text = ageUp.Text;
-                    ScrollToBottomIfContentExceedsViewport(ageUp.Authoring);
+                    ageUp.Authoring.AgeUpClicked(
+                        () =>
+                        commands.Add(ageUp)
+                    );
+                    continue;
                 }
+
+                ageUp.Age++;
+                ageUp.Text += $"\n\n<b>Age: {ageUp.Age} years</b>";
+
+                if (ageUp.Authoring.Text == null)
+                {
+                    continue;
+                }
+                ageUp.Authoring.Text.text = ageUp.Text;
+
+                ScrollToBottomIfContentExceedsViewport(ageUp.Authoring);
             }
         }
 

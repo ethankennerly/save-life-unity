@@ -17,6 +17,12 @@ namespace TouchReplaying
 
         public TouchRecordingSystem(ITouchRecordingAuthoring authoring, ITouchInputProvider inputProvider = null, ITouchRecorder recorder = null)
         {
+            if (authoring == null)
+            {
+                Debug.LogWarning("TouchRecordingSystem: Authoring is null.");
+                return;
+            }
+
             _authoring = authoring;
             _sessionSeed = System.Environment.TickCount;
 
@@ -29,6 +35,11 @@ namespace TouchReplaying
 
         public void Update(float deltaTime, List<IComponent> _)
         {
+            if (_recorder == null)
+            {
+                return;
+            }
+
             _recorder.Update(deltaTime);
         }
 

@@ -9,8 +9,13 @@ public class TouchReplaySystem : ISystem
 
     public TouchReplaySystem(ITouchReplayAuthoring authoring, ITouchReplayer replayer = null)
     {
-        _authoring = authoring;
+        if (authoring == null)
+        {
+            Debug.LogWarning("TouchReplaySystem: Authoring is null.");
+            return;
+        }
 
+        _authoring = authoring;
         var replayAsset = _authoring.ReplayAsset;
         if (replayAsset == null ||
             replayAsset.touches == null ||
@@ -36,6 +41,11 @@ public class TouchReplaySystem : ISystem
 
     public void Update(float deltaTime, List<IComponent> _)
     {
+        if (_replayer == null)
+        {
+            return;
+        }
+
         _replayer.Update(deltaTime);
     }
 }

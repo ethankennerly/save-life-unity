@@ -9,7 +9,9 @@ namespace EthanKennerly.SaveLife
         {
             foreach (IComponent command in commands)
             {
-                if (command is AgeUpComponent ageUp)
+                if (command is AgeUpComponent ageUp &&
+                    ageUp.Authoring != null &&
+                    ageUp.Authoring.Ailment != null)
                 {
                     if (!ageUp.WasBorn)
                     {
@@ -45,11 +47,21 @@ namespace EthanKennerly.SaveLife
 
         private void HidePopup(IAilmentAuthoring authoring)
         {
+            if (authoring.PopupInstance == null)
+            {
+                return;
+            }
+
             authoring.PopupInstance.SetActive(false);
         }
 
         private void ShowPopup(IAilmentAuthoring authoring)
         {
+            if (authoring.PopupInstance == null)
+            {
+                return;
+            }
+            
             authoring.PopupInstance.SetActive(true);
         }
     }

@@ -27,6 +27,11 @@ namespace EthanKennerly.SaveLife
 
         private void RefreshHealthBar(HealthComponent health)
         {
+            if (health.Authoring == null)
+            {
+                return;
+            }
+
             IHealthAuthoring authoring = health.Authoring;
             authoring.HealthPercentText.text = $"{health.HealthPercent}%";
             authoring.FillImage.fillAmount = health.HealthPercent / 100f;
