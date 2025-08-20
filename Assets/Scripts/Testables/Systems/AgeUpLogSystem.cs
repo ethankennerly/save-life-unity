@@ -24,9 +24,7 @@ My name is Anika Ibrahim.
 My mother is Ifamma Ibrahim, a farmer (age 17).
 My father is Asha Ibrahim, a farmer (age 16).";
 
-                        var onClick = ageUp.Authoring.AgeUpButton.onClick;
-                        onClick.RemoveAllListeners();
-                        onClick.AddListener(() => commands.Add(ageUp));
+                        ageUp.Authoring.AgeUpClicked(() => commands.Add(ageUp));
                     }
                     else
                     {

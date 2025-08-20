@@ -16,7 +16,7 @@ MonoBehaviour:
   touches:
   - Action: 0
     NormalizedPos: {x: 0.3832888, y: 0.4380164}
-    DeltaMs: 4725
+    DeltaMs: 250
   - Action: 2
     NormalizedPos: {x: 0.3832888, y: 0.4380164}
     DeltaMs: 119

@@ -8,7 +8,6 @@ namespace EthanKennerly.SaveLife
     {
         [SerializeField]
         private Button _ageUpButton;
-        public Button AgeUpButton => _ageUpButton;
 
         [SerializeField]
         private TMP_Text _text;
@@ -33,5 +32,10 @@ namespace EthanKennerly.SaveLife
         [SerializeField]
         private AilmentAuthoring _ailment;
         public IAilmentAuthoring Ailment => _ailment;
+
+        public void AgeUpClicked(SimpleCallback onClick)
+        {
+            _ageUpButton.onClick.AddListener(() => onClick.Invoke());
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace EthanKennerly.SaveLife
 {
     public interface IAgeUpAuthoring
     {
-        Button AgeUpButton { get; }
+        void AgeUpClicked(SimpleCallback onClick);
         TMP_Text Text { get; }
         ScrollRect ScrollRect { get; }
         RectTransform ContentRectTransform { get; }
