@@ -64,7 +64,30 @@ namespace EthanKennerly.SaveLife
             label.style.marginBottom = 4;
 
             scroll.contentContainer.Add(label);
-            scroll.ScrollTo(label);
+
+            // Ensure bottom of the new (possibly tall) label is fully in view.
+            // Do this on the next layout pass so sizes are updated.
+            scroll.schedule.Execute(() =>
+            {
+                ScrollToBottomIfContentTooTall(scroll);
+            });
+        }
+
+        private void ScrollToBottomIfContentTooTall(ScrollView scroll)
+        {
+            float contentHeight  = scroll.contentContainer.resolvedStyle.height;
+            float viewportHeight = scroll.contentViewport.resolvedStyle.height;
+            if (contentHeight <= viewportHeight)
+            {
+                return;
+            }
+
+            var vs = scroll.verticalScroller;
+            if (vs == null)
+            {
+                return;
+            }
+            vs.value = vs.highValue;
         }
     }
 }

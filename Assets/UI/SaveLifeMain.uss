@@ -41,8 +41,8 @@
     flex: 1;
 }
 
-#MainScroll {
-    flex: 1;
+#LogLogScroll {
+    height: 80%;
     border-width: 1px;
     border-color: rgba(255, 255, 255, 0.15);
     border-radius: 4px;
