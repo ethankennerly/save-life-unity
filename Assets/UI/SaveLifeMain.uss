@@ -1,0 +1,54 @@
+.full {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    display: flex;
+    gap: 8px;
+}
+
+.title {
+    unity-font-style: bold;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px;
+    display: flex;
+}
+
+#MainScroll {
+    flex: 1;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#Root {
+}
