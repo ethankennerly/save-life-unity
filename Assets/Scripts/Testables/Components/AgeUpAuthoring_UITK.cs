@@ -44,5 +44,27 @@ namespace EthanKennerly.SaveLife
             Button button = root.Q<Button>(_ageUpButtonName);
             button.clicked += onClick.Invoke;
         }
+
+        public void AppendToLifeLog(string logText)
+        {
+            VisualElement root = _uiDocument.rootVisualElement;
+
+            ScrollView scroll = root.Q<ScrollView>("LifeLogScroll");
+            if (scroll == null)
+            {
+                Debug.LogError("LifeLogScroll not found");
+                return;
+            }
+
+            Label label = new Label(logText)
+            {
+                pickingMode = PickingMode.Ignore
+            };
+            label.style.whiteSpace = WhiteSpace.Normal;
+            label.style.marginBottom = 4;
+
+            scroll.contentContainer.Add(label);
+            scroll.ScrollTo(label);
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace EthanKennerly.SaveLife
         public readonly HealthComponent Health;
         public bool WasBorn;
         public int Age;
-        public string Text;
+        public string TextToAppend;
 
         public AgeUpComponent(IAgeUpAuthoring authoring)
         {

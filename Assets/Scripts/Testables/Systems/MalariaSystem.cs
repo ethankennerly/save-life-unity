@@ -25,7 +25,7 @@ namespace EthanKennerly.SaveLife
                         continue;
                     }
 
-                    ageUp.Text += "\n\nWhile I was sleeping, a mosquito bit me. I am suffering from malaria.";
+                    ageUp.TextToAppend += "\n\nWhile I was sleeping, a mosquito bit me. I am suffering from malaria.";
                     health.HealthPercent -= 10;
                     if (health.HealthPercent <= 0)
                     {
