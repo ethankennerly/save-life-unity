@@ -1,13 +1,18 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+
+using Button = UnityEngine.UIElements.Button;
 
 namespace EthanKennerly.SaveLife
 {
-    public class AgeUpAuthoring_uGUI : MonoBehaviour, IAgeUpAuthoring
+    public class AgeUpAuthoring_UITK : MonoBehaviour, IAgeUpAuthoring
     {
         [SerializeField]
-        private Button _ageUpButton;
+        private UIDocument _uiDocument;
+        [SerializeField]
+        private string _ageUpButtonName = "AgeUpButton";
 
         [SerializeField]
         private TMP_Text _text;
@@ -35,7 +40,9 @@ namespace EthanKennerly.SaveLife
 
         public void AgeUpClicked(SimpleCallback onClick)
         {
-            _ageUpButton.onClick.AddListener(() => onClick.Invoke());
+            VisualElement root = _uiDocument.rootVisualElement;
+            Button button = root.Q<Button>(_ageUpButtonName);
+            button.clicked += onClick.Invoke;
         }
     }
 }

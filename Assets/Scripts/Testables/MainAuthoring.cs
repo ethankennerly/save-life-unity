@@ -10,7 +10,7 @@ namespace EthanKennerly.SaveLife
         public Transform Parent => _parent;
 
         [SerializeField]
-        private AgeUpAuthoring _ageUp;
+        private AgeUpAuthoring_uGUI _ageUp;
         public IAgeUpAuthoring AgeUp => _ageUp;
 
         [SerializeField]
