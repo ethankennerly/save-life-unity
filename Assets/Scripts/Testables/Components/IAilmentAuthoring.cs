@@ -5,7 +5,7 @@ namespace EthanKennerly.SaveLife
 {
     public interface IAilmentAuthoring
     {
-        GameObject PopupInstance { get; }
-        Button CloseButton { get; }
+        void SetUpPopup();
+        void ShowPopup();
     }
 }

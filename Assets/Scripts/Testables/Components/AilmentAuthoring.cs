@@ -7,10 +7,36 @@ namespace EthanKennerly.SaveLife
     {
         [SerializeField]
         private GameObject _PopupInstance;
-        public GameObject PopupInstance => _PopupInstance;
 
         [SerializeField]
         private Button _closeButton;
-        public Button CloseButton => _closeButton;
+
+        public void SetUpPopup()
+        {
+            HidePopup();
+            var onClick = _closeButton.onClick;
+            onClick.RemoveAllListeners();
+            onClick.AddListener(HidePopup);
+        }
+
+        public void ShowPopup()
+        {
+            if (_PopupInstance == null)
+            {
+                return;
+            }
+            
+            _PopupInstance.SetActive(true);
+        }
+
+        private void HidePopup()
+        {
+            if (_PopupInstance == null)
+            {
+                return;
+            }
+
+            _PopupInstance.SetActive(false);
+        }
     }
 }

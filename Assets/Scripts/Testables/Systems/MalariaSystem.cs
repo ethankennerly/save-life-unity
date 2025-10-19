@@ -15,7 +15,7 @@ namespace EthanKennerly.SaveLife
                 {
                     if (!ageUp.WasBorn)
                     {
-                        SetUpPopup(ageUp.Authoring.Ailment);
+                        ageUp.Authoring.Ailment.SetUpPopup();
                         continue;
                     }
 
@@ -32,37 +32,9 @@ namespace EthanKennerly.SaveLife
                         continue;
                     }
 
-                    ShowPopup(ageUp.Authoring.Ailment);
+                    ageUp.Authoring.Ailment.ShowPopup();
                 }
             }
-        }
-
-        private void SetUpPopup(IAilmentAuthoring authoring)
-        {
-            HidePopup(authoring);
-            var onClick = authoring.CloseButton.onClick;
-            onClick.RemoveAllListeners();
-            onClick.AddListener(() => HidePopup(authoring));
-        }
-
-        private void HidePopup(IAilmentAuthoring authoring)
-        {
-            if (authoring.PopupInstance == null)
-            {
-                return;
-            }
-
-            authoring.PopupInstance.SetActive(false);
-        }
-
-        private void ShowPopup(IAilmentAuthoring authoring)
-        {
-            if (authoring.PopupInstance == null)
-            {
-                return;
-            }
-            
-            authoring.PopupInstance.SetActive(true);
         }
     }
 }
