@@ -9,7 +9,7 @@ namespace TouchReplaying
     /// UI Toolkit based touch replayer. Dispatches ClickEvents to the provided root
     /// VisualElement. Designed to be testable by injecting the root and a screen->root mapper.
     /// </summary>
-    public class TouchReplayerUITK
+    public class TouchReplayerUITK : ITouchReplayer
     {
         private readonly List<TouchLogEntry> _log;
         private readonly VisualElement _root;

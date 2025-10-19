@@ -9,7 +9,7 @@ namespace TouchReplaying
     /// uGUI-based touch replayer. Replays touch log entries using Unity's EventSystem
     /// and creates a simple touch indicator (Image) on a provided Canvas.
     /// </summary>
-    public class TouchReplayer
+    public class TouchReplayer : ITouchReplayer
     {
         private readonly List<TouchLogEntry> _log;
         private readonly Canvas _targetCanvas;

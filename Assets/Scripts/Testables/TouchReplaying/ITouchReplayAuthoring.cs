@@ -1,9 +1,10 @@
 using UnityEngine;
 
-public interface ITouchReplayAuthoring
+namespace TouchReplaying
 {
-    TouchLogAsset ReplayAsset { get; }
-    Canvas TargetCanvas { get; }
-    Sprite IndicatorSprite { get; }
-    Color IndicatorColor { get; }
+    // Minimal authoring contract: implementations own their UI dependencies.
+    public interface ITouchReplayAuthoring
+    {
+        TouchLogAsset ReplayAsset { get; }
+    }
 }

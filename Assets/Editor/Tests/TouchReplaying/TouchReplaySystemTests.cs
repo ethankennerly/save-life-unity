@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using UnityEngine;
+using TouchReplaying;
 
 public class TouchReplaySystemTests
 {
@@ -24,12 +25,10 @@ public class TouchReplaySystemTests
 public class MockTouchReplayAuthoring : ITouchReplayAuthoring
 {
     public TouchLogAsset ReplayAsset { get; set; } = ScriptableObject.CreateInstance<TouchLogAsset>();
-    public Canvas TargetCanvas { get; set; }
-    public Sprite IndicatorSprite { get; set; }
-    public Color IndicatorColor { get; set; } = Color.green;
 
     public MockTouchReplayAuthoring()
     {
         ReplayAsset.touches.Add(new TouchLogEntry(TouchAction.Down, new Vector2(10, 10), 0));
+        ReplayAsset.touches.Add(new TouchLogEntry(TouchAction.Up, new Vector2(10, 10), 100));
     }
 }

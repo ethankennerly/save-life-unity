@@ -50,7 +50,9 @@ MonoBehaviour:
   _ageUp: {fileID: 5473794077899016804}
   _deathPopupPrefab: {fileID: 0}
   _touchRecording: {fileID: 0}
-  _touchReplay: {fileID: 0}
+  _touchReplay:
+    _replayAsset: {fileID: 11400000, guid: 6f920fb83ee154005970973b6ff215e9, type: 2}
+    _document: {fileID: 4582904793175121956}
 --- !u!114 &5473794077899016804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +74,8 @@ MonoBehaviour:
   _health: {fileID: 0}
   _ailment:
     _uiDocument: {fileID: 4582904793175121956}
-    _closeButtonName: CloseButton
+    _ailmentPopupName: AilmentPopup
+    _okButtonName: OkButton
 --- !u!114 &4582904793175121956
 MonoBehaviour:
   m_ObjectHideFlags: 0

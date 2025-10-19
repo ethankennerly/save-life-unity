@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TouchReplaying;
 
 namespace EthanKennerly.SaveLife
 {
@@ -22,7 +22,7 @@ namespace EthanKennerly.SaveLife
         public ITouchRecordingAuthoring TouchRecording => _touchRecording;
 
         [SerializeField]
-        TouchReplayAuthoring _touchReplay;
+        TouchReplayAuthoring_UITK _touchReplay;
         public ITouchReplayAuthoring TouchReplay => _touchReplay;
 
         private MainController _saveLife;
