@@ -70,7 +70,9 @@ MonoBehaviour:
   _contentRectTransform: {fileID: 0}
   _viewportRectTransform: {fileID: 0}
   _health: {fileID: 0}
-  _ailment: {fileID: 0}
+  _ailment:
+    _uiDocument: {fileID: 4582904793175121956}
+    _closeButtonName: CloseButton
 --- !u!114 &4582904793175121956
 MonoBehaviour:
   m_ObjectHideFlags: 0

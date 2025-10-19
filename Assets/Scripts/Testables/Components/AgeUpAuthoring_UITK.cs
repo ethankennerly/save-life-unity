@@ -35,7 +35,7 @@ namespace EthanKennerly.SaveLife
         public IHealthAuthoring Health => _health;
 
         [SerializeField]
-        private AilmentAuthoring_uGUI _ailment;
+        private AilmentAuthoring_UITK _ailment;
         public IAilmentAuthoring Ailment => _ailment;
 
         public void AgeUpClicked(SimpleCallback onClick)
