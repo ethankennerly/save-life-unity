@@ -26,7 +26,7 @@ namespace EthanKennerly.SaveLife
         public IHealthAuthoring Health => _health;
 
         [SerializeField]
-        private AilmentAuthoring _ailment;
+        private AilmentAuthoring_uGUI _ailment;
         public IAilmentAuthoring Ailment => _ailment;
 
         private void Awake()

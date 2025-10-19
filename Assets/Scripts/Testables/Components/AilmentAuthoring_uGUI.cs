@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace EthanKennerly.SaveLife
 {
-    public class AilmentAuthoring : MonoBehaviour, IAilmentAuthoring
+    public class AilmentAuthoring_uGUI : MonoBehaviour, IAilmentAuthoring
     {
         [SerializeField]
         private GameObject _PopupInstance;
