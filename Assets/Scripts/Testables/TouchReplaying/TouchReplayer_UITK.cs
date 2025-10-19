@@ -21,7 +21,6 @@ namespace TouchReplaying
         private bool _playing;
 
         public bool IsPlaying => _playing;
-        public Vector2 CurrentPosition { get; private set; }
         public bool IsTouching { get; private set; }
 
         public TouchReplayerUITK(List<TouchLogEntry> log, VisualElement root, Func<Vector2, Vector2> screenToRoot = null, VisualElement indicator = null)
@@ -65,21 +64,27 @@ namespace TouchReplaying
 
             if (IsTouching && _indicator != null)
             {
-                var rootPos = _screenToRoot(CurrentPosition);
-                _indicator.transform.position = new Vector3(rootPos.x, rootPos.y, 0);
+                // place using normalized coordinates so indicator is inside root bounds
+                var mapped = MapNormalizedToRoot(CurrentPositionNormalized);
+                var local = new Vector2(mapped.x - _root.worldBound.x, mapped.y - _root.worldBound.y);
+                _indicator.transform.position = new Vector3(local.x, local.y, 0);
             }
         }
 
+        // Keep the last normalized position for Update logic
+        private Vector2 CurrentPositionNormalized;
+
         private void Apply(TouchLogEntry entry)
         {
-            CurrentPosition = entry.GetScreenPos();
+            CurrentPositionNormalized = entry.NormalizedPos;
 
             switch (entry.Action)
             {
                 case TouchAction.Down:
                     IsTouching = true;
-                    ShowIndicator(CurrentPosition);
-                    DispatchClick(CurrentPosition);
+                    var mapped = MapNormalizedToRoot(entry.NormalizedPos);
+                    ShowIndicator(entry.NormalizedPos);
+                    DispatchClick(mapped);
                     break;
 
                 case TouchAction.Move:
@@ -88,18 +93,20 @@ namespace TouchReplaying
 
                 case TouchAction.Up:
                     IsTouching = false;
-                    DispatchClick(CurrentPosition);
+                    var mappedUp = MapNormalizedToRoot(entry.NormalizedPos);
+                    DispatchClick(mappedUp);
                     HideIndicator();
                     break;
             }
         }
 
-        private void ShowIndicator(Vector2 screenPos)
+        private void ShowIndicator(Vector2 normalizedPos)
         {
             if (_indicator == null) return;
             _indicator.style.display = DisplayStyle.Flex;
-            var rootPos = _screenToRoot(screenPos);
-            _indicator.transform.position = new Vector3(rootPos.x, rootPos.y, 0);
+            var mapped = MapNormalizedToRoot(normalizedPos);
+            var local = new Vector2(mapped.x - _root.worldBound.x, mapped.y - _root.worldBound.y);
+            _indicator.transform.position = new Vector3(local.x, local.y, 0);
         }
 
         private void HideIndicator()
@@ -108,14 +115,30 @@ namespace TouchReplaying
             _indicator.style.display = DisplayStyle.None;
         }
 
-        private void DispatchClick(Vector2 screenPos)
+        private void DispatchClick(Vector2 panelPosWorld)
         {
+            // panelPosWorld is in world coordinates matching root.worldBound
+            // Compute local and dispatch ClickEvent. Handlers active on elements will receive it.
             using (var click = ClickEvent.GetPooled())
             {
                 click.target = _root;
-                // optionally set localPosition/related fields if needed by handlers
                 _root.SendEvent(click);
             }
+        }
+
+        private Vector2 MapNormalizedToRoot(Vector2 normalized)
+        {
+            // Map normalized (0..1) where Y=0 bottom to worldBound coordinates
+            var wb = _root.worldBound;
+            var nx = normalized.x;
+            var ny = 1f - normalized.y;
+
+            // normalized Y in TouchLogEntry is screen fraction from bottom (0..1),
+            // but worldBound origin's Y is top-left, so convert accordingly.
+            // worldBound y increases downward in UI Toolkit coordinates.
+            var mappedX = wb.x + nx * wb.width;
+            var mappedY = wb.y + ny * wb.height;
+            return new Vector2(mappedX, mappedY);
         }
     }
 }

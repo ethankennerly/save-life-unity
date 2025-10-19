@@ -12,9 +12,7 @@
                 <Toggle name="ReplayToggle" text="Replay" />
             </VisualElement>
         </VisualElement>
-        <VisualElement name="ReplayContent" class="content" style="flex-direction: column-reverse; top: 0; align-items: auto;">
-            <VisualElement name="TouchIndicator" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Textures/1x1_%23FFFFFFFF.png?fileID=6228855826194295199&amp;guid=9ceab629defbe4c6aa9382e6725cc698&amp;type=3#1x1_#FFFFFFFF_0&quot;); -unity-background-image-tint-color: rgba(0, 255, 0, 0.25); width: 25px; height: 25px; min-width: 25px; min-height: 25px; flex-basis: 25px; flex-shrink: 0;" />
-        </VisualElement>
+        <VisualElement name="ReplayContent" class="content" style="flex-direction: column-reverse; top: 0; align-items: auto;" />
     </VisualElement>
     <VisualElement name="AilmentPopup" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; flex-basis: auto; flex-direction: row; flex-shrink: 1; position: absolute; visibility: visible; align-content: center; align-self: center; justify-content: center;">
         <VisualElement name="AilmentPanel" style="flex-grow: 0; width: auto; height: auto; background-color: rgb(204, 204, 204); align-items: center; align-self: center; align-content: center; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; padding-top: 10px; margin-top: 20px; margin-right: 20px; margin-bottom: 20px; margin-left: 20px; min-width: 25%; max-width: 75%; left: auto; top: auto; bottom: auto; flex-shrink: 0; flex-wrap: wrap; flex-basis: auto; justify-content: space-between; min-height: 12%; max-height: 75%;">
@@ -23,4 +21,5 @@
             <Button text="OK" name="OkButton" style="background-color: rgb(255, 255, 255);" />
         </VisualElement>
     </VisualElement>
+    <VisualElement name="TouchIndicator" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Textures/1x1_%23FFFFFFFF.png?fileID=6228855826194295199&amp;guid=9ceab629defbe4c6aa9382e6725cc698&amp;type=3#1x1_#FFFFFFFF_0&quot;); -unity-background-image-tint-color: rgba(0, 255, 0, 0.25); width: 50px; height: 50px; min-width: 50px; min-height: 50px; flex-basis: auto; flex-shrink: 0; flex-direction: row; position: absolute; border-top-color: rgb(0, 255, 0); border-top-width: 4px; border-left-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-bottom-color: rgb(0, 255, 0); border-left-color: rgb(0, 255, 0); border-right-color: rgb(0, 255, 0); align-self: auto; align-content: center; justify-content: center; align-items: auto; border-top-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px;" />
 </UXML>

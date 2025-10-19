@@ -15,7 +15,7 @@ MonoBehaviour:
   randomSeed: 1222343306
   touches:
   - Action: 0
-    NormalizedPos: {x: 0.3832888, y: 0.4380164}
+    NormalizedPos: {x: 0.05, y: 0.05}
     DeltaMs: 250
   - Action: 2
     NormalizedPos: {x: 0.3832888, y: 0.4380164}
