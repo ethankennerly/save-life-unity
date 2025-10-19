@@ -3,7 +3,7 @@
     <VisualElement name="Root" class="full">
         <ScrollView name="LifeLogScroll" mode="Vertical" style="height: 100%;" />
         <Button text="&lt;size=+10&gt;+&lt;/size&gt;\nAge Up" name="AgeUpButton" parse-escape-sequences="true" style="padding-top: 0; padding-bottom: 0; width: 100px; height: 75px; bottom: 0; right: auto; top: 0; left: auto; align-items: center; align-self: center; align-content: center;" />
-        <VisualElement name="ReplayHeader" class="header">
+        <VisualElement name="ReplayHeader" class="header" style="visibility: hidden;">
             <Label name="Title" text="Save Life" class="title" />
             <VisualElement class="row">
                 <Button name="StartButton" text="Start" />
